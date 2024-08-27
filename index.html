@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="AUTHOR" content="CHILUVERU SAITEJA">
+    <title>Dancing Institute</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Mukta:wght@200;300;400;500;600;700;800&family=Sedan+SC&display=swap" rel="stylesheet">
+</head>
+<style>
+   
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    background-image: url('images/kids.jpg');
+    
+    background-size: cover;
+    background-attachment: fixed; /* Optional: Keeps the background fixed during scroll */
+}
+.sedan-sc-regular {
+  font-family: "Sedan SC", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.background-container {
+    background-image: url('images/kids.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the image within the container */
+    width: 100%; /* Full width */
+    height: 400px; /* Adjust height as needed */
+    border: 5px solid #ffffff; /* White border for contrast */
+    border-radius: 20px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for a stylish effect */
+    position: relative; /* Allows for positioning of additional elements if needed */
+    overflow: hidden; /* Ensures content doesn't overflow the border-radius */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/danceimg1.jpg');
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    background-position: center; /* Centers the image */
+     /* Applies a blur effect */
+    z-index: -1; /* Ensures the overlay is behind other content */
+}
+
+
+
+.container {
+    position: relative; /* Ensures the content is above the overlay */
+    z-index: 1;
+}
+
+/* Border styling for the background image */
+.styled-border {
+    border: 10px solid #ffffff; /* White border for contrast */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Space between the border and content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for a stylish effect */
+    max-width: 80%; /* Restricts width to make border effect more visible */
+    margin: 0 auto; /* Centers the container */
+    position: relative;
+}
+
+/* Base styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('kids.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps the background fixed during scroll */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background */
+    color: white;
+    padding: 10px 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100px;
+}
+
+.logo img {
+    height: 120px;
+    transition: all 0.5s linear;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Slightly black and transparent */
+    z-index: -1;
+}
+
+.cta-button {
+    background-color: #f37c28;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.about, .classes, .instructors, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.class-list, .instructor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.class-item, .instructor-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* Slightly transparent background */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.styled-border {
+    border: 10px solid #ffffff; /* White border for contrast */
+    border-radius: 15px; /* Rounded corners */
+    padding: 15px; /* Space between the border and content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Adds shadow for a stylish effect */
+    max-width: 80%; /* Restricts width to make border effect more visible */
+    margin: 0 auto; /* Centers the container */
+    position: relative;
+}
+
+/* Base styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-image: url('kids.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: #f4f4f4; /* Light text color for better readability on dark backgrounds */
+}
+
+header {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #ffffff;
+    padding: 10px 0;
+    font-size: 18px; /* Larger font size for better readability */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 100px;
+}
+
+.logo img {
+    height: 170px;
+    transition: all 0.5s linear;
+    margin-left: -80px;
+}
+
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold; /* Adds emphasis to the navigation links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+nav ul li a:hover {
+    color: rgb(245, 140, 1); /* Changes color on hover for better interaction */
+}
+
+.hero {
+    background-image: url('https://yt3.googleusercontent.com/0414ae9ymbbxXC1Ob5gGk5UvfoDlHpGWzXF0jEkZ11stfUP0detPoGAXsHugnWL4xc2JIDdqlwY=w1707-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    font-size: 24px; /* Larger font size for the hero section */
+}
+
+.hero h2 {
+    font-size: 36px; /* Large heading font size */
+    margin: 0;
+    font-weight: bold; /* Bold for emphasis */
+}
+
+.hero p {
+    font-size: 18px; /* Adjusted font size for the paragraph */
+    margin-top: 10px;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+.cta-button {
+    background-color: rgb(245, 140, 1);
+    color: #ffffff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    font-size: 18px; /* Font size for the CTA button */
+    font-weight: bold; /* Bold text for emphasis */
+    transition: background-color 0.3s ease; /* Smooth background color transition on hover */
+}
+
+.cta-button:hover {
+    background-color: rgb(245, 140, 1); /* Slightly darker shade on hover */
+}
+
+.about, .classes, .instructors, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about h2, .classes h2, .instructors h2, .contact h2 {
+    font-size: 30px; /* Heading font size for sections */
+    margin: 0;
+    color: rgb(245, 140, 1); /* Highlight color for section headings */
+}
+
+.class-list, .instructor-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.class-item, .instructor-item {
+    background-color: #ffffff;
+    color: #333333; /* Dark text for contrast */
+    padding: 20px;
+    border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    font-size: 16px; /* Font size for class and instructor items */
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px; /* Smaller font size for the footer */
+}
+
+.styled-border {
+    border: 10px solid #ffffff;
+    border-radius: 15px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 80%;
+    margin: 0 auto;
+    position: relative;
+}
+
+
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent background */
+    width: 80%;
+    max-width: 400px;
+    font-size: 18px; /* Adjust font size as needed */
+    transition: background-color 0.3s ease;
+}
+
+.contact-item:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.contact-item i {
+    font-size: 24px; /* Icon size */
+    margin-right: 10px;
+}
+
+
+.class-item{
+    margin-bottom:10px ;
+}
+
+.scroll-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.scroll-wrapper {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    padding: 10px;
+    scrollbar-width: none; /* For Firefox */
+}
+
+.scroll-wrapper::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.arrow {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    z-index: 10;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #717171;
+}
+.services-header {
+    background-color: rgb(245, 140, 1); /* Box background color */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the box */
+    display: inline-block; /* Box width based on content */
+    margin-bottom: 20px; /* Space below the box */
+}
+
+.services-header h2 {
+    color: black; /* Text color */
+    margin: 0; /* Remove default margin */
+}
+
+.services-header {
+    background-color: rgb(245, 140, 1); /* Box background color */
+    padding: 10px 20px; /* Padding around the text */
+    border-radius: 5px; /* Rounded corners for the box */
+    display: inline-block; /* Box width based on content */
+    margin-bottom: 20px; /* Space below the box */
+}
+
+.instructors-header h2,
+.contact-header h2 {
+    color: black; /* Text color */
+    margin: 0; /* Remove default margin */
+    font-size: 2.5em; /* Adjust size as needed */
+}
+
+.instructor-item,
+.contact-item {
+    /* Additional styling for instructor and contact items */
+}
+
+
+
+
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url('images/danceimg1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -1;
+}
+.about  .textarea{
+
+font-size: 25px; color: rgb(255, 255, 255); font-style: italic; padding-left: 100px; padding-right: 100px; padding-top: 40px;
+}
+.responsive-heading {
+    font-size: 40px; /* Default font size */
+    font-weight: bolder;
+    color: rgb(245, 140, 1);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+/* Media Queries for responsiveness */
+
+/* Default styles for text container */
+.text-container {
+    padding: 20px; /* Add padding inside the container */
+    border: 1px solid #ccc; /* Add border to the container */
+    margin: 10px; /* Margin around the container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Default styles for the heading */
+.responsive-heading {
+    font-size: 40px;
+    font-weight: bolder;
+    color: rgb(245, 140, 1);
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+}
+
+@media (max-width: 1080px) {
+    .overlay {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/lll.jpg');
+    }
+
+    .menu-icon {
+        display: block; /* Show icon on mobile */
+    }
+
+    .nav-menu.active {
+        display: block; /* Show menu when active */
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .logo img {
+        height: 100px;
+        margin-left: 50px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .hero {
+        padding: 80px 20px;
+    }
+
+    .class-item, .instructor-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .about-description.textarea {
+        font-size: 15px; /* Set font size to 5px on mobile screens */
+    }
+    .responsive-heading {
+        font-size: 30px; /* Adjust font size for tablets and mobile devices */
+    }
+    
+}
+
+@media (max-width:1080px) {
+    .navbar {
+        padding: 0 10px;
+    }
+    .overlay {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/lll.jpg');
+    }
+
+    .nav-right {
+        display: none;
+    }
+
+    .logo img {
+        height: 120px;
+        margin-left: 110px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .cta-button {
+        padding: 8px 16px;
+    }
+
+    .class-item, .instructor-item {
+        width: 100%;
+        max-width: 280px;
+    }
+    .about-description.textarea {
+        font-size: 15px; /* Set font size to 5px on mobile screens */
+        margin: -50px;
+        margin-top: 8px;
+        
+        
+    }
+    .responsive-heading {
+        font-size: 30px; /* Adjust font size for tablets and mobile devices */
+    }
+    
+
+    .text-container {
+        padding: 10px; /* Further adjust padding for smaller mobile devices */
+        margin: 2px; /* Further adjust margin for smaller mobile devices */
+    }
+
+    .about-description {
+        font-size: 5px; /* Ensure font size for <h3> remains 5px */
+        line-height: 1.5; /* Ensure line height remains for readability */
+    }
+   
+}
+
+
+
+    
+
+
+
+
+
+
+</style>
+<body>
+    
+
+
+    <div class="overlay"></div>
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <img class="image" src="images/ntp-removebg-preview.png" alt="Dancing Institute Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home" class="nav-right">Home</a></li>
+                    <li><a href="#about" class="nav-right">About Us</a></li>
+                    <li><a href="#classes" class="nav-right">Classes</a></li>
+                    <li><a href="#instructors" class="nav-right">Instructors</a></li>
+                    <li><a href="#contact" class="nav-right">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <!-- <h2 class="lilita-one-regular" >Welcome to Natya Prabhu Dance Studio</h2>
+        <p>Dance Company and Traning Center</p>
+        <a href="#classes" class="cta-button">View Classes</a> -->
+    </section>
+
+    
+    <section id="about" class="about">
+        <h2 class="sedan-sc-regular responsive-heading"
+            style="font-size: 40px; font-weight: bolder; color: rgb(245, 140, 1); text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;">
+            WELCOME TO<br /> NATYA PRABHU DANCE STUDIO & COSTUMES
+        </h2>
+    
+        <h3 class="about-description textarea">
+            Natya Prabhu Dance Studio, established in 2010, is a renowned academy dedicated to the art of dance. Known for its
+            commitment to excellence, the studio offers comprehensive training in various dance forms, nurturing both beginners
+            and advanced students. With experienced instructors and a vibrant learning environment, Natya Prabhu Dance Studio
+            continues to inspire and cultivate the next generation of dancers.
+        </h3>
+    </section>
+
+    <section id="classes" class="classes">
+        <div class="services-header">
+            <h2 style="font-size: 30px;">OUR SERVICES</h2>
+        </div>
+    
+        <div class="class-list">
+            <div class="class-item">
+                <i class="fa-solid fa-shirt" style="color: #000000; height: 70px; font-size: xxx-large; margin-top: 10px;"></i>
+                <h3>COSTUMES</h3>
+                <p style="font-style: italic; font-family: 'Arial', sans-serif; color: #333;">We Provide our own costumes.</p>
+            </div>
+    
+            <div class="class-item">
+                <img src="images/dancelogo.jpg" style="height: 70px;" />
+                <h3>DANCE</h3>
+                <p style="font-style: italic; font-family: 'Arial', sans-serif; color: #333;">Master Classical, Contemporary, Fusion Styles, etc.</p>
+            </div>
+    
+            <div class="class-item">
+                <img src="images/zumba-removebg-preview.png" style="height: 70px;" />
+                <h3>ZUMBA</h3>
+                <p style="font-style: italic; font-family: 'Arial', sans-serif; color: #333;">Dance Your Way to Fitness</p>
+            </div>
+    
+            <div class="class-item">
+                <img src="images/yoga.jpg" style="height: 70px;" />
+                <h3>YOGA</h3>
+                <p style="font-style: italic; font-family: 'Arial', sans-serif; color: #333;">Cultivate Balance and Wellness</p>
+            </div>
+    
+            <div class="class-item">
+                <img src="images/music1-removebg-preview.png" style="height: 70px;" />
+                <h3>MUSIC</h3>
+                <p style="font-style: italic; font-family: 'Arial', sans-serif; color: #333;">Discover Your Rhythm</p>
+            </div>
+        </div>
+    </section >
+    <section style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+        <div style="display: flex; justify-content: center; align-items: center; flex-direction: column;">
+            <div style="color: #f37c28; font-size: 70px;font-weight: bold;margin-top: 20px;" >+14</div>
+            <div style="font-size: 15px;">Years of Experience</div>
+        </div>
+    
+        <div style="margin-top: 20px;">
+            <div style="color: #f37c28; font-size: 60px;font-weight: bold;">+5000</div>
+            <div style="font-size: 18px;">Certified Students</div>
+        </div>
+    </section>
+    
+    
+
+    
+    <section id="instructors" class="instructors" style="margin-top: 30px;">
+        <div class="services-header instructors-header">
+            <h2 style="font-size: 30px;">MEET OUR INSTRUCTORS</h2>
+        </div>
+    
+        <div class="instructor-list">
+            <div class="instructor-item">
+                <h3>SANTHOSH.A</h3>
+                <h1 style="font-size: 15px;">(founder)</h1>
+                <p style="cursor: pointer">
+                    <a href="https://www.instagram.com/npd_santhosh" style="text-decoration: none;">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span style="color: #000000; margin-left: 10px;">npd_santhosh</span>
+                      </a>
+                      
+                </p>
+            </div>
+            <div class="instructor-item">
+                <h3  >SAI KIRAN.T</h3>
+                <p style="cursor: pointer;padding-top: 33px;">
+                    <a style="text-decoration: none;" href="https://www.instagram.com/thesaikey_run"><i class="fa-brands fa-instagram"></i><span style="color: #000000;margin-left: 10px; padding-top: 30px;">thesaikey_run</span></a> 
+                </p>
+            </div>
+        </div>
+        <img src="images/ntp-removebg-preview.png" style="height: 250px; margin-bottom: -80px;" />
+    </section>
+
+    
+    
+    <section id="contact" class="contact">
+        <div class="services-header contact-header">
+            <h2 style="font-size: 30px;">CONTACT US</h2>
+        </div>
+    
+        <div class="contact-info">
+            <a href="mailto:npddancestudio@gmail.com" class="contact-item">
+                <i class="fas fa-envelope"></i>
+                <p>Email: npddancestudio@gmail.com</p>
+            </a>
+            <a href="tel:+8019852418" class="contact-item">
+                <i class="fas fa-phone"></i>
+                <p>Phone: 8019852418</p>
+            </a>
+            <a href="https://www.instagram.com/npd_dancestudio?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="contact-item" target="_blank">
+                <i class="fab fa-instagram"></i>
+                <p>Instagram</p>
+            </a>
+            <a href="https://www.youtube.com/@santhoshayagalla582" class="contact-item" target="_blank">
+                <i class="fa-brands fa-youtube"></i>
+                <p>Youtube</p>
+            </a>
+            <a href="https://maps.app.goo.gl/54V2d93igzRhgiGm6" class="contact-item" target="_blank">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>Location: Plot.No: 11A, SYNO 256, 26, Yellareddy Colony. Nagaram, Keesara (M), Medchal (Dist),Hyderabad,Telangana - 500083</p>
+            </a>
+        </div>
+    
+        <div class="scroll-container">
+            <button class="arrow left-arrow" style="border-radius: 5px;">&lt;</button>
+            <div class="scroll-wrapper" style="margin-left: 50px; margin-right: 50px; margin-bottom: 20px;">
+                <div class="scroll-content">
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/teju.jpg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/pasha.jpg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/gaddam.jpg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/sandhya.jpg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/pradeep.jpg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/sasmitha.jpeg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/sooraj.jpeg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                    <div style="display: inline-block; margin-right: 50px;">
+                        <img src="images/bunny.jpeg" style="height: 200px; border-radius: 10px;" />
+                    </div>
+                </div>
+            </div>
+            <button class="arrow right-arrow" style="border-radius: 5px;">&gt;</button>
+            <div class="dots-container">
+                <!-- Dot indicators will be generated by JavaScript -->
+            </div>
+        </div>
+    </section>
+    
+
+
+    
+
+    <footer>
+        <p>&copy; 2024 Natyaprabhu dance studio. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navMenu = document.getElementById('nav-menu');
+
+    menuIcon.addEventListener('click', function() {
+        // Toggle the 'active' class to show/hide the menu
+        if (navMenu.classList.contains('active')) {
+            navMenu.classList.remove('active');
+        } else {
+            navMenu.classList.add('active');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const scrollWrapper = document.querySelector('.scroll-wrapper');
+    const scrollContent = document.querySelector('.scroll-content');
+    const dotsContainer = document.querySelector('.dots-container');
+
+    // Create dot indicators based on the number of images
+    const numDots = scrollContent.children.length;
+    for (let i = 0; i < numDots; i++) {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        dot.dataset.index = i;
+        dotsContainer.appendChild(dot);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+    
+    // Function to update the active dot based on scroll position
+    const updateDots = () => {
+        const scrollLeft = scrollWrapper.scrollLeft;
+        const containerWidth = scrollWrapper.offsetWidth;
+        const scrollWidth = scrollContent.scrollWidth;
+        const index = Math.round((scrollLeft / (scrollWidth - containerWidth)) * (numDots - 1));
+        dots.forEach(dot => dot.classList.remove('active'));
+        if (dots[index]) dots[index].classList.add('active');
+    };
+
+    // Initial dot update
+    updateDots();
+
+    // Add click event listeners to dots
+    dots.forEach(dot => {
+        dot.addEventListener('click', (e) => {
+            const index = parseInt(e.target.dataset.index, 10);
+            scrollWrapper.scrollLeft = (scrollContent.scrollWidth / numDots) * index;
+            updateDots();
+        });
+    });
+
+    // Arrow functionality
+    document.querySelector('.left-arrow').addEventListener('click', () => {
+        scrollWrapper.scrollBy({ left: -200, behavior: 'smooth' });
+        updateDots();
+    });
+
+    document.querySelector('.right-arrow').addEventListener('click', () => {
+        scrollWrapper.scrollBy({ left: 200, behavior: 'smooth' });
+        updateDots();
+    });
+
+    // Update dots on scroll
+    scrollWrapper.addEventListener('scroll', updateDots);
+});
+
+
+    </script>
+</body>
+</html>
